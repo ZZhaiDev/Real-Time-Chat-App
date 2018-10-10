@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A45516A2216E8F51005847A3 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45516A1216E8F51005847A3 /* LoginController.swift */; };
 		A495A093216E8BCB0085CBBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A495A092216E8BCB0085CBBF /* AppDelegate.swift */; };
 		A495A095216E8BCB0085CBBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A495A094216E8BCB0085CBBF /* ViewController.swift */; };
 		A495A098216E8BCB0085CBBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A495A096216E8BCB0085CBBF /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A45516A1216E8F51005847A3 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		A495A08F216E8BCB0085CBBF /* Real-Time-Chat-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Real-Time-Chat-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A495A092216E8BCB0085CBBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A495A094216E8BCB0085CBBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A45516A0216E8F2E005847A3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A45516A1216E8F51005847A3 /* LoginController.swift */,
+				A495A094216E8BCB0085CBBF /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		A495A086216E8BCB0085CBBF = {
 			isa = PBXGroup;
 			children = (
@@ -77,8 +88,8 @@
 		A495A091216E8BCB0085CBBF /* Real-Time-Chat-App */ = {
 			isa = PBXGroup;
 			children = (
+				A45516A0216E8F2E005847A3 /* Controller */,
 				A495A092216E8BCB0085CBBF /* AppDelegate.swift */,
-				A495A094216E8BCB0085CBBF /* ViewController.swift */,
 				A495A096216E8BCB0085CBBF /* Main.storyboard */,
 				A495A099216E8BCF0085CBBF /* Assets.xcassets */,
 				A495A09B216E8BCF0085CBBF /* LaunchScreen.storyboard */,
@@ -198,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A495A095216E8BCB0085CBBF /* ViewController.swift in Sources */,
+				A45516A2216E8F51005847A3 /* LoginController.swift in Sources */,
 				A495A093216E8BCB0085CBBF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
