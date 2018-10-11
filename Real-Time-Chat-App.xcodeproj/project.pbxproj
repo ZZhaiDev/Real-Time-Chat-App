@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		A45516A2216E8F51005847A3 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45516A1216E8F51005847A3 /* LoginController.swift */; };
+		A45516A4216E9ADB005847A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A45516A3216E9ADB005847A3 /* GoogleService-Info.plist */; };
 		A495A093216E8BCB0085CBBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A495A092216E8BCB0085CBBF /* AppDelegate.swift */; };
 		A495A095216E8BCB0085CBBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A495A094216E8BCB0085CBBF /* ViewController.swift */; };
 		A495A098216E8BCB0085CBBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A495A096216E8BCB0085CBBF /* Main.storyboard */; };
 		A495A09A216E8BCF0085CBBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A495A099216E8BCF0085CBBF /* Assets.xcassets */; };
 		A495A09D216E8BCF0085CBBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A495A09B216E8BCF0085CBBF /* LaunchScreen.storyboard */; };
 		A495A0A8216E8BD00085CBBF /* Real_Time_Chat_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A495A0A7216E8BD00085CBBF /* Real_Time_Chat_AppTests.swift */; };
+		A97301B57ED1F0D8CC351E6B /* Pods_Real_Time_Chat_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4061FB96CB4326C32F52EA2C /* Pods_Real_Time_Chat_AppTests.framework */; };
+		CF0FE9D5FAAC6621E7A160BD /* Pods_Real_Time_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F221DF11ABAA4595D1BD47 /* Pods_Real_Time_Chat_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +30,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C0FCD89B1DC5AE4C77C0967 /* Pods-Real-Time-Chat-AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Real-Time-Chat-AppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Real-Time-Chat-AppTests/Pods-Real-Time-Chat-AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4061FB96CB4326C32F52EA2C /* Pods_Real_Time_Chat_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Real_Time_Chat_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63F221DF11ABAA4595D1BD47 /* Pods_Real_Time_Chat_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Real_Time_Chat_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1A22052ABEEB23179E34ECB /* Pods-Real-Time-Chat-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Real-Time-Chat-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Real-Time-Chat-App/Pods-Real-Time-Chat-App.debug.xcconfig"; sourceTree = "<group>"; };
 		A45516A1216E8F51005847A3 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		A45516A3216E9ADB005847A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A495A08F216E8BCB0085CBBF /* Real-Time-Chat-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Real-Time-Chat-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A495A092216E8BCB0085CBBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A495A094216E8BCB0085CBBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +46,8 @@
 		A495A0A3216E8BD00085CBBF /* Real-Time-Chat-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Real-Time-Chat-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A495A0A7216E8BD00085CBBF /* Real_Time_Chat_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Real_Time_Chat_AppTests.swift; sourceTree = "<group>"; };
 		A495A0A9216E8BD00085CBBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A72217CE60F22D19B3EB29CA /* Pods-Real-Time-Chat-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Real-Time-Chat-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Real-Time-Chat-App/Pods-Real-Time-Chat-App.release.xcconfig"; sourceTree = "<group>"; };
+		DE6554F8AB083F939FA46A0C /* Pods-Real-Time-Chat-AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Real-Time-Chat-AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Real-Time-Chat-AppTests/Pods-Real-Time-Chat-AppTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF0FE9D5FAAC6621E7A160BD /* Pods_Real_Time_Chat_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,12 +63,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A97301B57ED1F0D8CC351E6B /* Pods_Real_Time_Chat_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4CF35A3B9FEC4BA34F2F60FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1A22052ABEEB23179E34ECB /* Pods-Real-Time-Chat-App.debug.xcconfig */,
+				A72217CE60F22D19B3EB29CA /* Pods-Real-Time-Chat-App.release.xcconfig */,
+				3C0FCD89B1DC5AE4C77C0967 /* Pods-Real-Time-Chat-AppTests.debug.xcconfig */,
+				DE6554F8AB083F939FA46A0C /* Pods-Real-Time-Chat-AppTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A45516A0216E8F2E005847A3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +96,8 @@
 				A495A091216E8BCB0085CBBF /* Real-Time-Chat-App */,
 				A495A0A6216E8BD00085CBBF /* Real-Time-Chat-AppTests */,
 				A495A090216E8BCB0085CBBF /* Products */,
+				4CF35A3B9FEC4BA34F2F60FC /* Pods */,
+				BA0DB1EABEEA3695715F4114 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +118,7 @@
 				A495A096216E8BCB0085CBBF /* Main.storyboard */,
 				A495A099216E8BCF0085CBBF /* Assets.xcassets */,
 				A495A09B216E8BCF0085CBBF /* LaunchScreen.storyboard */,
+				A45516A3216E9ADB005847A3 /* GoogleService-Info.plist */,
 				A495A09E216E8BCF0085CBBF /* Info.plist */,
 			);
 			path = "Real-Time-Chat-App";
@@ -107,6 +133,15 @@
 			path = "Real-Time-Chat-AppTests";
 			sourceTree = "<group>";
 		};
+		BA0DB1EABEEA3695715F4114 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63F221DF11ABAA4595D1BD47 /* Pods_Real_Time_Chat_App.framework */,
+				4061FB96CB4326C32F52EA2C /* Pods_Real_Time_Chat_AppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A495A0AC216E8BD00085CBBF /* Build configuration list for PBXNativeTarget "Real-Time-Chat-App" */;
 			buildPhases = (
+				EE45AB19DBDF9F0F5DA7651F /* [CP] Check Pods Manifest.lock */,
 				A495A08B216E8BCB0085CBBF /* Sources */,
 				A495A08C216E8BCB0085CBBF /* Frameworks */,
 				A495A08D216E8BCB0085CBBF /* Resources */,
+				0C9870E3FBBCCBE84A7B4301 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +168,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A495A0AF216E8BD00085CBBF /* Build configuration list for PBXNativeTarget "Real-Time-Chat-AppTests" */;
 			buildPhases = (
+				95A017B58E360012CBD0B10F /* [CP] Check Pods Manifest.lock */,
 				A495A09F216E8BD00085CBBF /* Sources */,
 				A495A0A0216E8BD00085CBBF /* Frameworks */,
 				A495A0A1216E8BD00085CBBF /* Resources */,
@@ -189,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A495A09D216E8BCF0085CBBF /* LaunchScreen.storyboard in Resources */,
+				A45516A4216E9ADB005847A3 /* GoogleService-Info.plist in Resources */,
 				A495A09A216E8BCF0085CBBF /* Assets.xcassets in Resources */,
 				A495A098216E8BCB0085CBBF /* Main.storyboard in Resources */,
 			);
@@ -202,6 +241,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C9870E3FBBCCBE84A7B4301 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Real-Time-Chat-App/Pods-Real-Time-Chat-App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Real-Time-Chat-App/Pods-Real-Time-Chat-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95A017B58E360012CBD0B10F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Real-Time-Chat-AppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE45AB19DBDF9F0F5DA7651F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Real-Time-Chat-App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A495A08B216E8BCB0085CBBF /* Sources */ = {
@@ -370,16 +470,14 @@
 		};
 		A495A0AD216E8BD00085CBBF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1A22052ABEEB23179E34ECB /* Pods-Real-Time-Chat-App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TJEC8LNQP8;
 				INFOPLIST_FILE = "Real-Time-Chat-App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cognitiveAI.Real-Time-Chat-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -389,16 +487,14 @@
 		};
 		A495A0AE216E8BD00085CBBF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A72217CE60F22D19B3EB29CA /* Pods-Real-Time-Chat-App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TJEC8LNQP8;
 				INFOPLIST_FILE = "Real-Time-Chat-App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cognitiveAI.Real-Time-Chat-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -408,17 +504,14 @@
 		};
 		A495A0B0216E8BD00085CBBF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C0FCD89B1DC5AE4C77C0967 /* Pods-Real-Time-Chat-AppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TJEC8LNQP8;
 				INFOPLIST_FILE = "Real-Time-Chat-AppTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cognitiveAI.Real-Time-Chat-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -429,17 +522,14 @@
 		};
 		A495A0B1216E8BD00085CBBF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE6554F8AB083F939FA46A0C /* Pods-Real-Time-Chat-AppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TJEC8LNQP8;
 				INFOPLIST_FILE = "Real-Time-Chat-AppTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cognitiveAI.Real-Time-Chat-AppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
