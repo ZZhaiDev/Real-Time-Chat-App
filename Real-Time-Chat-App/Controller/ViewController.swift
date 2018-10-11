@@ -18,6 +18,10 @@ class ViewController: UITableViewController {
         ref.updateChildValues(["someValue": 123123])
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
+        
+        if Auth.auth().currentUser?.uid == nil{
+            handleLogout()
+        }
     }
 
     @objc func handleLogout(){
