@@ -7,6 +7,7 @@ target 'Real-Time-Chat-App' do
 pod 'Firebase/Database'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
+pod 'Firebase/Core'
   # Pods for Real-Time-Chat-App
 
   target 'Real-Time-Chat-AppTests' do

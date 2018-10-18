@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "883453BB61E4BC23B70C0E9D6969733F"
+               BlueprintIdentifier = "5B5C2B012453E2E1C3ED0F378DAEAB6B"
                BuildableName = "Pods_Real_Time_Chat_App.framework"
                BlueprintName = "Pods-Real-Time-Chat-App"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "883453BB61E4BC23B70C0E9D6969733F"
+            BlueprintIdentifier = "5B5C2B012453E2E1C3ED0F378DAEAB6B"
             BuildableName = "Pods_Real_Time_Chat_App.framework"
             BlueprintName = "Pods-Real-Time-Chat-App"
             ReferencedContainer = "container:Pods.xcodeproj">
