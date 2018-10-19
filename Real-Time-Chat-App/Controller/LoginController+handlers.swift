@@ -28,9 +28,9 @@ extension LoginController: UIImagePickerControllerDelegate, UINavigationControll
             }
             
             let imageName = NSUUID().uuidString
-            let storageRef = Storage.storage().reference().child("images/\(imageName).png")
+            let storageRef = Storage.storage().reference().child("images/\(imageName).jpg")
             print("111111")
-            if let uploadData = self.profileImageView.image!.jpegData(compressionQuality: 0.8) {
+            if let profileImage = self.profileImageView.image, let uploadData = profileImage.jpegData(compressionQuality: 0.1){
                 print(uploadData.description)
                 print(uploadData)
                 print("1111112")
@@ -67,6 +67,10 @@ extension LoginController: UIImagePickerControllerDelegate, UINavigationControll
                 print(err!)
                 return
             }
+//            self.messageController?.navigationItem.title = values["name"] as? String
+            let user = User()
+            user.setValuesForKeys(values)
+            self.messageController?.setupNavBarWithUser(user: user)
             print("Saved user successfully into Direbase DB")
             self.dismiss(animated: true, completion: nil)
         })

@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Real-Time-Chat-App/Controller/LoginController+handlers.swift"
-            timestampString = "561583799.173986"
+            timestampString = "561658424.146655"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "handleRegister()"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "registerUserIntoDatabase(uid:values:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,94 +25,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Real-Time-Chat-App/Controller/LoginController+handlers.swift"
-            timestampString = "561583799.174085"
+            filePath = "Real-Time-Chat-App/Controller/MessageController.swift"
+            timestampString = "561658424.146747"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "handleRegister()"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "fetchUserAndSetupNavBarTitle()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Real_Time_Chat_App.LoginController.handleRegister() -&gt; ()"
-                  moduleName = "Real-Time-Chat-App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cai_ios_dev_1/Desktop/Real-Time-Chat-App/Real-Time-Chat-App/Controller/LoginController+handlers.swift"
-                  timestampString = "561583799.354045"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "3226">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRStorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Real_Time_Chat_App.LoginController.handleRegister() -&gt; ()"
-                  moduleName = "Real-Time-Chat-App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cai_ios_dev_1/Desktop/Real-Time-Chat-App/Real-Time-Chat-App/Controller/LoginController+handlers.swift"
-                  timestampString = "561583799.358557"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "128">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Real-Time-Chat-App/Controller/LoginController+handlers.swift"
-            timestampString = "561583799.1741641"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "handleRegister()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRStorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Real_Time_Chat_App.LoginController.handleRegister() -&gt; ()"
-                  moduleName = "Real-Time-Chat-App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cai_ios_dev_1/Desktop/Real-Time-Chat-App/Real-Time-Chat-App/Controller/LoginController+handlers.swift"
-                  timestampString = "561583799.364645"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "1478">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRStorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Real_Time_Chat_App.LoginController.handleRegister() -&gt; ()"
-                  moduleName = "Real-Time-Chat-App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cai_ios_dev_1/Desktop/Real-Time-Chat-App/Real-Time-Chat-App/Controller/LoginController+handlers.swift"
-                  timestampString = "561583799.367146"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "85">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
