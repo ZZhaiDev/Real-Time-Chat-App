@@ -39,44 +39,52 @@ class MessageController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let ref = Database.database().reference()
-//        ref.updateChildValues(["someValue": 123123])
-        
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogout))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Users", style: .plain, target: self, action: #selector(handleNewMessage))
         
         checkIfUserIsLoggedIn()
         
         tableView.register(UserCell.self, forCellReuseIdentifier: cellId)
-        
-        observeMessage()
     }
     
     
     var messages = [Message]()
     var messagesDictionary = [String: Message]()
     
+    func observeUserMessages(){
+        guard let uid = Auth.auth().currentUser?.uid else{
+            return
+        }
+        let ref = Database.database().reference().child("user-messages").child(uid)
+        ref.observe(.childAdded) { (snapshot) in
+            let messageId = snapshot.key
+            let messageReference = Database.database().reference().child("Message").child(messageId)
+            messageReference.observeSingleEvent(of: .value, with: { (snapshot) in
+                if let dictionary = snapshot.value as? [String: AnyObject]{
+                    let message = Message()
+                    message.setValuesForKeys(dictionary)
+                    self.messages.append(message)
+                    if let toId = message.toId{
+                        self.messagesDictionary[toId] = message
+                    }
+                }
+                
+                self.messages = Array(self.messagesDictionary.values)
+                self.messages.sort(by: { (message1, message2) -> Bool in
+                    return message1.timeStamp?.int32Value > message2.timeStamp?.int32Value
+                })
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            })
+        }
+    }
+    
     func observeMessage(){
         let ref = Database.database().reference().child("Message")
         ref.observe(.childAdded) { (snapshot) in
-            if let dictionary = snapshot.value as? [String: AnyObject]{
-                let message = Message()
-                message.setValuesForKeys(dictionary)
-                self.messages.append(message)
-                if let toId = message.toId{
-                    self.messagesDictionary[toId] = message
-                }
-            }
             
-            self.messages = Array(self.messagesDictionary.values)
-            self.messages.sort(by: { (message1, message2) -> Bool in
-                return message1.timeStamp?.int32Value > message2.timeStamp?.int32Value
-            })
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
             
         }
     }
@@ -97,6 +105,24 @@ class MessageController: UITableViewController {
         return 72
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let message = messages[indexPath.row]
+        guard let chatPartnerId = message.chatPartnerId() else{
+            return
+        }
+        
+        let ref = Database.database().reference().child("users").child(chatPartnerId)
+        ref.observeSingleEvent(of: .value) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: AnyObject] else{
+                return
+            }
+            let user = User()
+            user.id = chatPartnerId
+            user.setValuesForKeys(dictionary)
+            self.showChatControllerForUser(user: user) 
+        }
+    }
+    
     @objc func handleNewMessage(){
         let newMessageController = NewMessageController()
         newMessageController.messageController = self
@@ -108,6 +134,7 @@ class MessageController: UITableViewController {
         if Auth.auth().currentUser?.uid == nil{
             handleLogout()
         }else{
+            
             fetchUserAndSetupNavBarTitle()
         }
     }
@@ -128,6 +155,12 @@ class MessageController: UITableViewController {
     }
     
     func setupNavBarWithUser(user: User){
+        
+        messages.removeAll()
+        messagesDictionary.removeAll()
+        tableView.reloadData()
+        observeUserMessages()
+        
         let titleView = UIView()
         titleView.frame = CGRect(x: 0, y: 0, width: 100, height: 40)
         //        titleView.backgroundColor = UIColor.redColor()

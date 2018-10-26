@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ChatLogController: UICollectionViewController, UITextFieldDelegate {
+class ChatLogController: UICollectionViewController, UITextFieldDelegate, UICollectionViewDelegateFlowLayout {
     
     var user: User?{
         didSet{
@@ -25,14 +25,31 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate {
         return textField
     }()
 
+    let cellId = "cellId"
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.delegate = self
         collectionView.backgroundColor = UIColor.white
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         setUpInputComponents()
     }
     
-    func setUpInputComponents(){
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 5
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        cell.backgroundColor = UIColor.blue
         
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.height, height: 80)
+    }
+    
+    func setUpInputComponents(){
         let containerView = UIView()
         containerView.translatesAutoresizingMaskIntoConstraints = false
 //        containerView.backgroundColor = UIColor.red
@@ -75,7 +92,20 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate {
         let fromId = Auth.auth().currentUser!.uid
         let timestamp = Int(NSDate().timeIntervalSince1970)
         let values = ["text": inputTextField.text!, "toId": toID, "fromId": fromId, "timeStamp": timestamp] as [String : Any]
-        childRef.updateChildValues(values)
+        childRef.updateChildValues(values) { (error, ref) in
+            if error != nil {
+                print(error ?? "")
+                return
+            }
+            
+            guard let messageId = childRef.key else { return }
+            
+            let userMessagesRef = Database.database().reference().child("user-messages").child(fromId).child(messageId)
+            userMessagesRef.setValue(1)
+            
+            let recipientUserMessagesRef = Database.database().reference().child("user-messages").child(toID).child(messageId)
+            recipientUserMessagesRef.setValue(1)
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
