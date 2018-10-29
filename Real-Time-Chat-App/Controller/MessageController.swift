@@ -114,7 +114,7 @@ class MessageController: UITableViewController {
         let ref = Database.database().reference().child("users").child(chatPartnerId)
         ref.observeSingleEvent(of: .value) { (snapshot) in
             guard let dictionary = snapshot.value as? [String: AnyObject] else{
-                return
+                return 
             }
             let user = User()
             user.id = chatPartnerId

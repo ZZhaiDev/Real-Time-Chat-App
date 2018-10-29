@@ -22,6 +22,7 @@
 		A49852592179119600C49E84 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49852582179119600C49E84 /* Extensions.swift */; };
 		A49852C2218375F300C49E84 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49852C1218375F300C49E84 /* Message.swift */; };
 		A49852C521837C2300C49E84 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49852C421837C2300C49E84 /* UserCell.swift */; };
+		A49852C721876A1200C49E84 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49852C621876A1100C49E84 /* ChatMessageCell.swift */; };
 		A97301B57ED1F0D8CC351E6B /* Pods_Real_Time_Chat_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4061FB96CB4326C32F52EA2C /* Pods_Real_Time_Chat_AppTests.framework */; };
 		CF0FE9D5FAAC6621E7A160BD /* Pods_Real_Time_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F221DF11ABAA4595D1BD47 /* Pods_Real_Time_Chat_App.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		A49852582179119600C49E84 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A49852C1218375F300C49E84 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		A49852C421837C2300C49E84 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		A49852C621876A1100C49E84 /* ChatMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		A72217CE60F22D19B3EB29CA /* Pods-Real-Time-Chat-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Real-Time-Chat-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Real-Time-Chat-App/Pods-Real-Time-Chat-App.release.xcconfig"; sourceTree = "<group>"; };
 		DE6554F8AB083F939FA46A0C /* Pods-Real-Time-Chat-AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Real-Time-Chat-AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Real-Time-Chat-AppTests/Pods-Real-Time-Chat-AppTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				A49852C421837C2300C49E84 /* UserCell.swift */,
+				A49852C621876A1100C49E84 /* ChatMessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				A49852592179119600C49E84 /* Extensions.swift in Sources */,
 				A49852562177CAA400C49E84 /* ChatLogController.swift in Sources */,
 				A45516A2216E8F51005847A3 /* LoginController.swift in Sources */,
+				A49852C721876A1200C49E84 /* ChatMessageCell.swift in Sources */,
 				A45516B421750839005847A3 /* User.swift in Sources */,
 				A49852C521837C2300C49E84 /* UserCell.swift in Sources */,
 				A495A093216E8BCB0085CBBF /* AppDelegate.swift in Sources */,
