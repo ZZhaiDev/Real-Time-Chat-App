@@ -56,29 +56,38 @@ class MessageController: UITableViewController {
             return
         }
         let ref = Database.database().reference().child("user-messages").child(uid)
-        ref.observe(.childAdded) { (snapshot) in
-            let messageId = snapshot.key
-            let messageReference = Database.database().reference().child("Message").child(messageId)
-            messageReference.observeSingleEvent(of: .value, with: { (snapshot) in
-                if let dictionary = snapshot.value as? [String: AnyObject]{
-                    let message = Message()
-                    message.setValuesForKeys(dictionary)
-                    self.messages.append(message)
-                    if let toId = message.toId{
-                        self.messagesDictionary[toId] = message
+//        let refUser = Database.database().reference().child("user-messages")
+        ref.observe(.value) { (snapshot) in
+            let userCount = snapshot.childrenCount
+            var index = 0
+            ref.observe(.childAdded) { (snapshot) in
+                let messageId = snapshot.key
+                let messageReference = Database.database().reference().child("Message").child(messageId)
+                messageReference.observeSingleEvent(of: .value, with: { (snapshot) in
+                    if let dictionary = snapshot.value as? [String: AnyObject]{
+                        let message = Message()
+                        message.setValuesForKeys(dictionary)
+                        self.messages.append(message)
+                        if let chatPartnerId = message.chatPartnerId(){
+                            self.messagesDictionary[chatPartnerId] = message
+                        }
                     }
-                }
-                
-                self.messages = Array(self.messagesDictionary.values)
-                self.messages.sort(by: { (message1, message2) -> Bool in
-                    return message1.timeStamp?.int32Value > message2.timeStamp?.int32Value
+                    
+                    self.messages = Array(self.messagesDictionary.values)
+                    self.messages.sort(by: { (message1, message2) -> Bool in
+                        return message1.timeStamp?.int32Value > message2.timeStamp?.int32Value
+                    })
+                    
+                    index += 1
+                    if index == userCount{
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
+                    }
                 })
-                
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            })
+            }
         }
+        
     }
     
     func observeMessage(){
