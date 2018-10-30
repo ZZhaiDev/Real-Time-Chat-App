@@ -25,7 +25,7 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
             return
         }
         let userMessagesRef = Database.database().reference().child("user-messages").child(uid)
-        userMessagesRef.observeSingleEvent(of: .childAdded) { (snapshot) in
+        userMessagesRef.observe(.childAdded) { (snapshot) in
             let messageId = snapshot.key
             let messageRef = Database.database().reference().child("Message").child(messageId)
             messageRef.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -65,22 +65,13 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         setUpInputComponents()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        collectionView.reloadData()
-    }
-    
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return messages.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ChatMessageCell
-        let message = messages[indexPath.row]
+        let message = messages[indexPath.item]
         cell.textView.text = message.text
         return cell
     }
