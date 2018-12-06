@@ -5,8 +5,8 @@
 1. Non-Storyboard - autoLayout - NSLayoutAnchor
 1. FireBase
 
-![alt text](http://betastore.carloudy.com/media/documents/0gwp68ql/realTimeChat1.png)
-![alt text](http://betastore.carloudy.com/media/documents/0gwp68ql/realTimeChat2.png)
-![alt text](http://betastore.carloudy.com/media/documents/0gwp68ql/realTimeChat3.png)
-![alt text](http://betastore.carloudy.com/media/documents/0gwp68ql/realTimeChat4.png)
-![alt text](http://betastore.carloudy.com/media/documents/0gwp68ql/realTimeChat5.png)
+![alt text](https://github.com/zijiazhai/Real-Time-Chat-App/blob/master/readmeImages/realTimeChat1.png)
+![alt text](https://github.com/zijiazhai/Real-Time-Chat-App/blob/master/readmeImages/realTimeChat2.png)
+![alt text](https://github.com/zijiazhai/Real-Time-Chat-App/blob/master/readmeImages/realTimeChat3.png)
+![alt text](https://github.com/zijiazhai/Real-Time-Chat-App/blob/master/readmeImages/realTimeChat4.png)
+![alt text](https://github.com/zijiazhai/Real-Time-Chat-App/blob/master/readmeImages/realTimeChat5.png)
